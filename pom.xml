@@ -27,8 +27,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 
+	<!--
+		packages executable jar file or war archive, also easily runs the app
+	     ./mvnw package
+	     ./mvnw spring-boot:run
+	     -->
 	<build>
 		<plugins>
 			<plugin>
