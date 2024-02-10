@@ -19,7 +19,7 @@ public class CricketCoach implements Coach {
         return "Practice fast bowling for 15 minutes! :)";
     }
 
-    @PostConstruct
+    /*@PostConstruct
     public void postConstruct(){
         //method called after bean is created due to @PostConstruct annotation
         System.out.println("In postConstruct(): "+ getClass().getSimpleName());
@@ -29,5 +29,5 @@ public class CricketCoach implements Coach {
     public void preDestory(){
         //method called after bean is created due to @PostConstruct annotation
         System.out.println("In preDestroy(): "+ getClass().getSimpleName());
-    }
+    }*/
 }

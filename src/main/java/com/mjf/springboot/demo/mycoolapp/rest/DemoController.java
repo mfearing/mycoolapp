@@ -10,13 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     private Coach coach;
-    private Coach anotherCoach;
 
     @Autowired
-    public void setCoach(@Qualifier("cricketCoach") Coach coach,
-                         @Qualifier("cricketCoach") Coach anotherCoach){
+    public void setCoach(@Qualifier("aquatic") Coach coach){
+        //qualifier must be method name of @Bean annoatation in SportConfig, or the name given on the @Bean annotation
         this.coach = coach;
-        this.anotherCoach = anotherCoach;
     }
 
     @GetMapping("/dailyWorkout")
@@ -24,10 +22,5 @@ public class DemoController {
         return coach.getDailyWorkout();
     }
 
-    @GetMapping("/check")
-    public String check() {
-        //check if prototype is used
-        return "Comparing beans: myCoach == anotherCoach, " + (coach == anotherCoach);
-    }
 
 }
